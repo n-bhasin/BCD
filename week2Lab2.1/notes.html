@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="SlickNav/dist/slicknav.min.css" />
+    
+    <title>Week2 Lab2.1</title>
+</head>
+<body>
+    <div class="continer">
+        <!-- header -->
+        <div class="header">
+            <h3>Lab 2.1</h3>
+            <ul id="menu">
+                <li><a href="#">item 1</a></li>
+                <li><a href="#">item 2</a></li>
+                <li><a href="#">item 3</a></li>
+                <li><a href="#">item 4</a></li>
+            </ul>
+        </div>
+
+        <!-- lists -->
+        <div class="list">
+            <ul>
+                <li>First Item!</li>
+                <li>Second Item?</li>
+                <li>Woop!</li>
+                <ul>
+                    <li>Omg it's a sub list?!</li>
+                    <li>Yep, a sub list</li>
+                    <li>You can build a navigation menu with lists...</li>
+                </ul>
+            </ul>
+        </div>
+        <!-- paragraphs -->
+        <div class="paragraphs">
+            <h2 style="column-span:all;"> A Long Paragraph</h2>
+            What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in 
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                and more recently with desktop publishing software like Aldus PageMaker including 
+                versions of Lorem Ipsum.
+                What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in 
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                and more recently with desktop publishing software like Aldus PageMaker including 
+                versions of Lorem Ipsum.What is Lorem Ipsum?
+               
+            
+        </div>
+
+        <!-- position attribute -->
+        <div class="positionAttribute">
+            <h2 id="qa">Question/Answers</h2>
+            <hr>
+            <div class="questiondiv">
+                <p class=question> <b>Question:</b>What does position absolute do? </p>
+                <p id="tile" class="answer"> <b>Answer:</b>
+                    The position:absolute; help to position the element near to the parent positioned element.
+                    for example: <br>
+                    <div class="relative">This div element has position: relative;
+                        <div class="absolute">This div element has position: absolute;</div>
+                      </div>
+                </p>
+            </div>
+            <hr>
+            <div class="questiondiv">
+                <p class=question> <b>Question:</b>What does position relative do?</p>
+                <p id="tile" class="answer"> <b>Answer:</b>
+                    The position:relative; with this element gets the relative position and by using the top, bottom,left, right we can adjust it. 
+                    reference <a href="https://www.w3schools.com/css/css_positioning.asp">link</a>
+                    for example: <br>
+                    <div class="relative">This div element has position: relative;
+                        <div class="absolute">This div element has position: absolute;</div>
+                      </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- menu bar -->
+    <script src="jquery.js"></script>
+    <script src="SlickNav/dist/jquery.slicknav.min.js"></script> 
+   <script>
+        $(function(){
+            $('#menu').slicknav();
+            
+            $('#menu').hide();
+        });
+
+        $('.menu').slicknav('toggle'); // Method to toggle the menu
+        $('.menu').slicknav('open'); // Method to open the menu
+        $('.menu').slicknav('close'); // Method to close the menu
+    </script>
+   
+</body>
+</html>
