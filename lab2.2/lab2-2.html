@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 2.2 Lab: Forms</title>
+
+    <style>
+        label{
+            text-align: right;
+        }
+        .form-control{
+            margin-bottom:5px;
+            margin-left: 1em;;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://www.google.com/search" method="get" target="_blank">
+        <input type="search" name="q" size="40" maxlength="300">
+        <input type="hidden" name="domains" value="">
+        <input type="hidden" name="sitesearch" value="">
+        <input type="submit" id="search" value="search">
+    </form>
+    <form action="" method="post">
+        <label for="username">What is your name?</label>
+        <input class="form-control" type="text" placeholder="enter your name" name="username"> <br>
+
+        <label for="radioButton">Yes</label>
+        <input class="form-control" type="radio" id="yes"> <br>
+
+        <label for="radioButton">No</label>
+        <input class="form-control" type="radio" id="No"><br>
+
+        <label for="radioButton">Maybe</label>
+        <input class="form-control" type="radio" id="Maybe"> <br>
+
+        <select class="form-control" name="choose" id="flavours">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Strawberry">Strawberry</option>
+        </select> <br>
+        <label for="password">Enter your Password</label>
+        <input class="form-control" type="password" name="password" placeholder="enter your password" required> <br>
+
+        <label for="bonus">Bonus</label>
+        <input class="form-control" type="text" placeholder="enter your phone number" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+         title="Must be this format:999-999-9999" maxlength="12"> <br>
+
+         <input type="submit" value="SUBMIT">
+        </form>
+         
+         <p><b>Temperature Conversion</b> </p>
+         <select name="tempConversion" id="choice">
+             <option value="0">Celcius</option>
+             <option value="1">Fahrenheit</option>
+         </select> <br><br>
+
+         <input type="text" name="celcius" id="celcius" placeholder="enter temp">
+         <button name="celciusSubmit" id="submit" onclick="celToFah()">SUBMIT</button>
+         <p id="result"></p>
+
+         <script>
+            function celToFah(){
+                choice = document.querySelector("#choice").value;
+                if(choice == 0){
+                    let temp =  document.querySelector("#celcius").value;
+                    result = (temp * 9/5) + 32;
+                    document.querySelector("#result").innerHTML = result + "fahrenheit";
+                }
+                else{
+                    let temp =  document.querySelector("#celcius").value;
+                    result = (temp -32) * 5/9;
+                    document.querySelector("#result").innerHTML = result + "celcius";
+                }
+                
+            }
+            
+
+         </script>
+
+   
+</body>
+</html>
